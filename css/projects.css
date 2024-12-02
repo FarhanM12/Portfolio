@@ -1,0 +1,232 @@
+/* Projects Section */
+.projects-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #e0f7fa);
+  color: #2c3e50;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Animated Background Elements */
+.projects-section::before,
+.projects-section::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 184, 148, 0.2);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.projects-section::after {
+  top: auto;
+  bottom: -50px;
+  right: auto;
+  left: -50px;
+  background: rgba(108, 92, 231, 0.2);
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/* Section Title */
+.projects-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Projects Container */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #ffffff, #f1f3f4);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Sparkles */
+.project-card::before,
+.project-card::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 184, 148, 0.3);
+  border-radius: 50%;
+  animation: sparkle 4s infinite ease-in-out;
+}
+
+.project-card::after {
+  background: rgba(108, 92, 231, 0.3);
+  animation-delay: 2s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(50%, 50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Project Icon */
+.project-icon {
+  font-size: 3rem;
+  color: #00b894;
+  margin-bottom: 15px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 1rem;
+  color: #616161;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Project Tags */
+.project-tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.project-tag {
+  background: #6c5ce7;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-tag:hover {
+  transform: scale(1.1);
+  background: #00b894;
+}
+
+/* Button for Project Links */
+.project-link {
+  display: inline-block;
+  margin-top: auto;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00b894, #6c5ce7);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #6c5ce7, #0984e3);
+}
+
+.project-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.project-link:hover::after {
+  left: 100%;
+}

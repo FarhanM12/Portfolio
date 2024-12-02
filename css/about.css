@@ -1,0 +1,97 @@
+/* About Me Section Styling */
+.about-section {
+    padding: 120px 20px;
+    background-color: #f9fafb;
+    color: #2c3e50;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-section:hover {
+    background-color: #ecf0f1;
+}
+
+/* Container for About Text and Image */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 650px;
+    text-align: left;
+    padding: 20px;
+    animation: fadeInLeft 1s ease-out forwards;
+    opacity: 0;
+    color: #34495e;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #3498db;
+    animation: fadeInUp 1s ease-out forwards 0.3s;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: #3498db;
+}
+
+/* About Image */
+.about-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #3498db;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: fadeInUp 1s ease-out forwards 0.6s;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Zoom effect for the image */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure it zooms in on the center */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Image */
+.about-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

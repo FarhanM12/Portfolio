@@ -1,0 +1,121 @@
+.skills-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6c5ce7, #00b894);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Title */
+.skills-title {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill List Layout */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Skill Item */
+.skill-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 1s ease-out forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+}
+
+/* Enhanced 3D Hover Effect */
+.skill-item:hover {
+    transform: translateY(-10px) rotateY(15deg) scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background-color: #f0f4f8;
+}
+
+/* Skill Name */
+.skill-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Glowing Hover Effect for Skill Name */
+.skill-name:hover {
+    color: #00b894;
+    text-shadow: 0px 0px 8px rgba(0, 184, 148, 0.8);
+}
+
+/* Glow Effect on Hover */
+.skill-item:hover .skill-name {
+    animation: glowEffect 0.7s ease-in-out forwards;
+}
+
+/* Skill Description */
+.skill-description {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* New Icon or Badge Layout for Skills */
+.skill-icon {
+    font-size: 3rem;
+    color: #6c5ce7;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+/* Hover Effect for Skill Icon */
+.skill-item:hover .skill-icon {
+    color: #00b894;
+    transform: scale(1.2) rotate(15deg);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for Glow Effect */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 8px rgba(108, 92, 231, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 184, 148, 0.8), 0 0 25px rgba(0, 184, 148, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(108, 92, 231, 0.7), 0 0 30px rgba(0, 184, 148, 0.7);
+    }
+}
